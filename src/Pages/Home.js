@@ -24,12 +24,17 @@ import modalStyle from "../components/uploadCard/modalStyle";
 import "./home.css";
 
 const Home = () => {
+  
   const [projects, setProjects] = useState([]);
   const [user, setUser] = useState("");
-  const [open, setOpen] = React.useState(!JSON.parse(localStorage.getItem("user")));
-  const handleOpen = () => setOpen(true);
+  const [open, setOpen] = useState(!JSON.parse(localStorage.getItem("user")));
+  const [projectModalOpen, setProjectModalOpen] = useState(false);
+  const [projectTitle, setProjectTitle] = useState("");
+  const handleProjectModalClose = () => setProjectModalOpen(false);
+  const handleProjectModalOpen = () => setProjectModalOpen(true);
   const handleClose = () => setOpen(false);
   const [email, setEmail] = useState("");
+  const [stateCount, setStateCount] = useState(0);
   const Item = styled(Card)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
     ...theme.typography.body2,
@@ -42,7 +47,12 @@ const Home = () => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user) {
       setEmail(user);
+      getProjects()
     }
+    
+  }, [email, stateCount]);
+
+  const getProjects = () => {
     const json = JSON.stringify({
       email: email,
     });
@@ -55,8 +65,8 @@ const Home = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [email]);
-
+  }
+  // getProjects()
   const navigate = useNavigate();
 
   function handleClick(projectId) {
@@ -73,6 +83,27 @@ const Home = () => {
     setUser(event.target.value);
   };
 
+  const handleProjectTitle = (event) => {
+    event.preventDefault();
+    setProjectTitle(event.target.value);
+  };
+  const handleProjectSubmit = () => {
+    const json = JSON.stringify({
+      email: email,
+      projectName: projectTitle,
+    });
+    api
+      .post("/api/project", json)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+      getProjects()
+      handleProjectModalClose()
+      setStateCount(stateCount + 1);
+  };
   return (
     <>
       <CompanyName /> <TopRightIcon />
@@ -97,6 +128,7 @@ const Home = () => {
             <AddProjectButton
               fontSize="46.28px"
               startIcon={<AddCircleIcon className="add_icon" />}
+              onClick={handleProjectModalOpen}
             >
               Create New Project
             </AddProjectButton>
@@ -108,6 +140,7 @@ const Home = () => {
               <AddProjectButton
                 fontSize="30.552px"
                 startIcon={<AddCircleIcon className="small_add_icon" />}
+                onClick={handleProjectModalOpen}
               >
                 Create New Project
               </AddProjectButton>
@@ -154,6 +187,30 @@ const Home = () => {
             className="upload_button"
             variant="contained"
             onClick={handleSubmit}
+          >
+            Sumbit
+          </Button>
+        </Box>
+      </Modal>
+      <Modal
+        open={projectModalOpen}
+        onClose={handleProjectModalClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={modalStyle} className="upload_modal">
+          <h1>Enter Project Title</h1>
+          <TextField
+            className="upload_input"
+            fullWidth
+            label="Project Title"
+            id="projectTitle"
+            onChange={handleProjectTitle}
+          />
+          <Button
+            className="upload_button"
+            variant="contained"
+            onClick={handleProjectSubmit}
           >
             Sumbit
           </Button>

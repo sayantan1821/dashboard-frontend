@@ -16,7 +16,7 @@ const AddProjectButton = styled(Button)(({ fontSize, theme }) => ({
   fontWeight: "600",
   padding: "6px 18px",
   "&:hover": {
-    backgroundColor: "red",
+    backgroundColor: "#211935",
     // borderColor: "#00000061",
   },
 }));
