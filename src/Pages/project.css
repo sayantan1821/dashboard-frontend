@@ -1,0 +1,132 @@
+.project_sidebar {
+  height: 100vh;
+  width: 20vw;
+  position: absolute;
+  left: 0;
+  border-radius: 0px 21.2px 21.2px 0px;
+  background: #f3e8ff;
+}
+.project_navigation {
+  position: relative;
+  top: 10vh;
+}
+.project_navigation h3 {
+  /* color: #fff; */
+  /* M3/label/large - prominent */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.1px;
+}
+.project_option {
+  border-radius: 132.5px !important;
+  /* background: #7e22ce; */
+}
+.navigation_item :hover {
+  background: #7e22ce !important;
+  color: wheat;
+}
+.project_content {
+  width: 75vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* margin-top: 5vh; */
+}
+.project_nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 5vh 2vw 5vh 0;
+}
+.upload_breadcrumb {
+  color: #999;
+  font-family: Roboto;
+  font-size: 32.176px !important;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 45.965px; /* 142.857% */
+  letter-spacing: 0.23px;
+}
+.project_content h1 {
+  color: #7e22ce;
+  font-family: Roboto;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.upload_card {
+  fill: #fff;
+  stroke-width: 1px;
+  stroke: #999;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.06))
+    drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.06))
+    drop-shadow(4px 8px 9px rgba(0, 0, 0, 0.05))
+    drop-shadow(9px 18px 12px rgba(0, 0, 0, 0.03))
+    drop-shadow(16px 32px 14px rgba(0, 0, 0, 0.01))
+    drop-shadow(25px 49px 16px rgba(0, 0, 0, 0));
+  border-radius: 22px !important;
+  border: 1px solid #999;
+  width: 380px;
+  height: 139px;
+}
+.project_box {
+  width: 70vw;
+  margin-top: 2vh !important;
+}
+.upload_option_grid {
+  /* height: 40vh; */
+  width: 70vw !important;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+.upload_grid_core {
+  margin-top: 1vh !important;
+}
+.upload_card_content {
+  display: flex;
+  width: 280px !important;
+  /* height: 139px; */
+  flex-shrink: 0;
+  padding: 0 auto !important;
+  align-items: center;
+}
+.upload_logo {
+  width: 84px;
+  height: 82.708px;
+  /* background-color: red; */
+  /* border-radius: 50%; */
+}
+.upload_item {
+  padding-top: 25px !important;
+}
+.card_desc {
+  color: #3c3c3c;
+  font-family: Roboto;
+  font-size: 26.643px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33.061px; /* 124.09% */
+  letter-spacing: 0.19px;
+}
+.project_box p {
+  text-align: center;
+  color: #999;
+  font-family: Roboto;
+  font-size: 36.72px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.drag_box {
+  /* width: ; */
+  height: 20vh;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 4px dashed #999;
+}
+.transcript_container {
+  margin: auto;
+}

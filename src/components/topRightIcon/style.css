@@ -1,0 +1,7 @@
+.top_right_icons {
+    display: flex;
+    position: absolute;
+    right: 44px;
+    top: 44px;
+    font-size: large;
+}

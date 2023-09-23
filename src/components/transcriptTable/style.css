@@ -1,0 +1,26 @@
+.transcript_table {
+  width: 67vw !important;
+  margin-top: 5vh;
+  /* margin: auto; */
+  border-radius: 22px !important;
+  border: 1px solid #999 ;
+}
+.action_cell {
+    width: 12vw;
+}
+.action_button {
+    display: flex;
+    /* width: 8vw; */
+    justify-content: space-between;
+}
+/* .action_group_button {
+    border-color: black;
+} */
+.transcript_edit_button {
+    border-color: #D9D9D9 !important;
+    color: #3C3C3C !important;
+}
+.transcript_delete_button {
+    border-color: #D9D9D9 !important;
+    color: #FF274C !important;
+}

@@ -1,0 +1,26 @@
+.upload_modal {
+  outline: none;
+  width: 80vw !important;
+  height: 40vh;
+  border-radius: 20px;
+}
+.upload_modal h1 {
+  color: #3c3c3c;
+  font-family: Roboto;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.upload_input {
+  margin-bottom: 40px !important;
+}
+.upload_button {
+  border-radius: 8.509px !important;
+  background: #211935 !important;
+  width: 185px;
+  height: 73px;
+  position: absolute !important;
+  right: 40px !important;
+  bottom: 25px !important;
+}

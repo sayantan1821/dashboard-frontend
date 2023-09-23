@@ -1,0 +1,65 @@
+.no_project {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 9vh;
+}
+.no_project h1 {
+  color: #7e22ce;
+  font-family: Roboto;
+  font-size: 73.411px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 0;
+}
+.projects .landing_para {
+  width: 80vw;
+  color: #838383;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.add_icon {
+  height: 56px !important;
+  width: 56px !important;
+}
+
+.project {
+    position: relative;
+}
+.project_heading {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  /* align-items; */
+  max-width: 80vw;
+  position: relative;
+  top: 9vh;
+  margin-top: 41px;
+}
+.project_heading h1 {
+  color: #7e22ce;
+  font-family: Roboto;
+  font-size: 73.411px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.small_add_icon {
+  height: 37px !important;
+  width: 37px !important;
+  /* margin-left: 15px; */
+}
+.projects_box {
+    position: relative;
+    top: 12vh;
+    width: 80vw;
+    margin: auto;
+}

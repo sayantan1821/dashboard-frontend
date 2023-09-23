@@ -1,0 +1,58 @@
+.card {
+  border-radius: 26.17px !important;
+}
+.card_content {
+  display: flex;
+  border-radius: 26.17px !important;
+  border: 1.19px solid #999;
+  background: #fff;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.06),
+    1.18953px 2.37906px 5.94764px 0px rgba(0, 0, 0, 0.06),
+    4.75811px 9.51622px 10.70575px 0px rgba(0, 0, 0, 0.05),
+    10.70575px 21.41151px 14.27434px 0px rgba(0, 0, 0, 0.03),
+    19.03245px 38.0649px 16.65339px 0px rgba(0, 0, 0, 0.01),
+    29.7382px 58.28688px 19.03245px 0px rgba(0, 0, 0, 0);
+}
+.project_logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 18.212px;
+  background: #7e22ce;
+  display: flex;
+  align-items: center;
+}
+.project_logo h1 {
+  width: 150px;
+  /* height: 150px; */
+  margin: auto 0;
+  text-align: center;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 77.954px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1em;
+}
+.card_desc h3 {
+  color: #7e22ce;
+  font-family: Roboto;
+  font-size: 25.31px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card_desc p {
+  color: #969696;
+  font-family: Roboto;
+  font-size: 15.819px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0;
+}

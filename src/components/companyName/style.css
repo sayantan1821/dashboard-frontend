@@ -1,0 +1,20 @@
+.company_name {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+.company_name p {
+  color: #7e22ce;
+  font-family: Plus Jakarta Sans;
+  font-size: 37.743px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0;
+}
+.company .logo {
+  height: 53px;
+  width: 53px;
+}
