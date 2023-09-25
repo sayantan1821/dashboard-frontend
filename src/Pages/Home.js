@@ -25,7 +25,7 @@ import "./home.css";
 
 const Home = () => {
   const [projects, setProjects] = useState([]);
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState("ksayantan1821@gmail.com");
   const [open, setOpen] = useState(!JSON.parse(localStorage.getItem("user")));
   const [projectModalOpen, setProjectModalOpen] = useState(false);
   const [projectTitle, setProjectTitle] = useState("");
@@ -192,6 +192,7 @@ const Home = () => {
             label="Email Id"
             id="email"
             onChange={handleInput}
+            value={user}
           />
           <Button
             className="upload_button"
@@ -216,6 +217,7 @@ const Home = () => {
             label="Project Title"
             id="projectTitle"
             onChange={handleProjectTitle}
+            
           />
           <Button
             className="upload_button"
