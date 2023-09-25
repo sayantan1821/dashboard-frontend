@@ -24,7 +24,6 @@ import modalStyle from "../components/uploadCard/modalStyle";
 import "./home.css";
 
 const Home = () => {
-  
   const [projects, setProjects] = useState([]);
   const [user, setUser] = useState("");
   const [open, setOpen] = useState(!JSON.parse(localStorage.getItem("user")));
@@ -47,9 +46,8 @@ const Home = () => {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user) {
       setEmail(user);
-      getProjects()
+      getProjects();
     }
-    
   }, [email, stateCount]);
 
   const getProjects = () => {
@@ -65,7 +63,7 @@ const Home = () => {
       .catch((err) => {
         console.log(err);
       });
-  }
+  };
   // getProjects()
   const navigate = useNavigate();
 
@@ -75,8 +73,20 @@ const Home = () => {
 
   const handleSubmit = () => {
     localStorage.setItem("user", JSON.stringify(user));
-    setEmail(user);
-    handleClose();
+
+    const json = JSON.stringify({
+      email: user,
+    });
+    api
+      .post("/api/user", json)
+      .then((res) => {
+        console.log(res.data);
+        setEmail(user);
+        handleClose();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   const handleInput = (event) => {
     event.preventDefault();
@@ -100,9 +110,9 @@ const Home = () => {
       .catch((err) => {
         console.log(err);
       });
-      getProjects()
-      handleProjectModalClose()
-      setStateCount(stateCount + 1);
+    getProjects();
+    handleProjectModalClose();
+    setStateCount(stateCount + 1);
   };
   return (
     <>
